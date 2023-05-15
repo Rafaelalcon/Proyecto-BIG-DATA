@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+*{
+    /* box-sizing: border-box; */
+    font-family: 'Mochiy Pop One';
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background: linear-gradient(30deg,rgb(60, 186, 244),rgb(53, 8, 131),black);
+    background-size: 400% 400%;
+    position: relative;
+    margin: 0;
+    animation: cambiar 10s ease-in-out infinite;
+}
+@keyframes cambiar{
+    0%{background-position: 0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+#pantalla-inicial{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color:#ffffff
+} 
+#pantalla-inicial{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    /* margin: 60px 0; */
+}
+.content{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+}
+button{
+    display: inline-block;
+    height: 55px;
+    background: transparent;
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+    border: 2px solid #19e3d5;
+    outline: none;
+    color:#ffffff;
+    font-size: 17px;
+}
+
+button:hover{
+    background: linear-gradient(#19b4e3, #7057ed, #19b4e3);
+    color:#ffffff;
+    animation: squeeze3124 0.9s both;
+}
+@keyframes squeeze3124{
+    0%{
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+    }
+    30%{
+        -webkit-transform: scale3d(1.25, 0.75,1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    40%{
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    50%{
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+    65%{
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    75%{
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    100%{
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+}
+#hidden-audio {
+    display: none;
+}

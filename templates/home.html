@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css')}}">
+    <title>HOME</title>
+</head>
+<body>
+    <div id="content">
+        <div class="container text1">
+            <span style="--l: 'B'">B</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">N</span>
+            <span style="--l: 'W'">W</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'V'">V</span>
+            <span style="--l: 'E'">E</span>
+        </div>
+    </div>
+    <div class="content">
+        <a href="{{url_for('login')}}">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>LOG IN
+            </button>
+        </a>
+        <a href="{{url_for('signin')}}">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>SIGN IN
+            </button>
+        </a>
+    </div>
+</body>
+</html>

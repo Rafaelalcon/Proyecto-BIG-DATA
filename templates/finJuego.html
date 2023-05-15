@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='gameover.css')}}">
+    <title>GAMEOVER</title>
+</head>
+<body>
+    <div id="content">
+        <div class="container text1">
+            <span style="--l: 'G'">G</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'M'">M</span>
+            <span style="--l: 'E'">E</span>
+        </div>
+        <div class="conta text2">
+            <span style="--l: 'O'">O</span>
+            <span style="--l: 'V'">V</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'R'">R</span>
+        </div>
+    </div>
+    <div id="content2">
+        <div class="containe text3">
+            <span style="--l: 'B'">R</span>
+            <span style="--l: 'Y'">A</span>
+            <span style="--l: 'R'">N</span>
+            <span style="--l: 'A'">K</span>
+            <span style="--l: 'F'">I</span>
+            <span style="--l: 'A'">N</span>
+            <span style="--l: 'E'">G</span>
+        </div>
+    </div>
+    <table class="box">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Puntuación</th>
+            </tr>
+        </thead>
+        {% for puntuacion in puntuaciones%}
+        <tr>
+            <td>{{puntuacion[0]}}</td>
+            <td>{{puntuacion[1]}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <audio id="hidden-audio" autoplay>
+        <source src="static/gameover.mp3" type="audio/mpeg">
+        <source src="static/gameover.wav" type="audio/wav">
+    </audio>
+    <div class="content">
+        <a href="{{url_for('menu')}}">
+            <button class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>JUGAR OTRA VEZ
+            </button>
+        </a>
+        <a href="{{url_for('home')}}">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>SALIR
+            </button>
+        </a>
+    </div>
+</body>
+</html>

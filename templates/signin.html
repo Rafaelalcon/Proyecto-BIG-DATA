@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='signin.css')}}">
+</head>
+<body>
+    <div class="box">
+        <span class="borderLine"></span>
+        <form action="{{url_for('newUser')}}" method="POST" class="formulario">
+            <h2>Signin</h2>
+            <div class="inputBox">
+                <input type="text" required="required" name="usuario"/>
+                <label>Nombre de usuario</label>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" name="contrasena"/>
+                <label>Contraseña</label>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" name="name" />
+                <label>Nombre</label>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="{{url_for('login')}}">Login</a>
+            </div>
+            <input type="submit" value="Signin">
+        </form>
+    </div>
+</body>
+</html>

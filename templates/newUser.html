@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='newuser.css')}}" />
+    <title>Login</title>
+</head>
+<body>
+    {% if signin %}
+    <div id="content">
+        <div class="container text1">
+            <span style="--l: 'S'">S</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">G</span>
+            <span style="--l: 'G'">N</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">N</span>
+        </div>
+        <div class="containe text2">
+            <span style="--l: 'C'">C</span>
+            <span style="--l: 'O'">O</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'C'">C</span>
+            <span style="--l: 'T'">T</span>
+            <span style="--l: 'O'">O</span>
+        </div>
+    </div>
+    {% else %}
+    <div id="content">
+        <div class="container text1">
+            <span style="--l: 'S'">S</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">G</span>
+            <span style="--l: 'G'">N</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">N</span>
+        </div>
+        <div class="conta text3">
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">N</span>
+            <span style="--l: 'C'">C</span>
+            <span style="--l: 'O'">O</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'C'">C</span>
+            <span style="--l: 'T'">T</span>
+            <span style="--l: 'O'">O</span>
+        </div>
+    </div>
+    {% endif %}
+    <div class="content">
+        <a href="{{url_for('home')}}">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>VOLVER
+            </button>
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(#341349, #0a0011);
+  min-height: 100vh;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+button{ 
+  position: relative;
+  padding: 1.5em 2.8em;
+  outline: none;
+  border: 1px solid #303030;
+  background: #212121;
+  color: #fffeff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover{
+  box-shadow: 0 0 10px #5e21ec, 
+              0 0 25px #3c1890,
+              0 0 50px #ae00ff;
+  transition-delay: 0.6s;
+}
+button span{
+  position: absolute;
+}
+button span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #5e21ec);
+}
+button:hover span:nth-child(1){
+  left: 100%;
+  transition: 0.7s;
+}
+button span:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #5e21ec);
+}
+button:hover span:nth-child(3){
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
+}
+button span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, #5e21ec);
+}
+button:hover span:nth-child(2){
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+}
+button:hover span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #5e21ec);
+}
+button:hover span:nth-child(4){
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+}
+button:active{
+  background: #5e21ec;
+  background: linear-gradient(to top right, #5e21ec, #ae00ff);
+  color: #bfbfbf;
+  box-shadow: 0 0 8px #5e21ec, 0 0 8px #ae00ff, 0 0 8px #5e21ec;
+  transition: 0.1s;
+}
+button:active span:nth-child(1)
+span:nth-child(2)
+span:nth-child(2)
+span:nth-child(2){
+  transition: none;
+  transition-delay: none;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 8%;
+    transform: translateX(0px);
+    animation: float 3s ease-in-out infinite;
+  }
+  
+@keyframes float{
+    0%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(-60px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}
+.container span{
+    font-size: 100px;
+    font-weight: bold;
+    position: relative;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+.containe span{
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.container span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px)
+}
+.containe span::before{
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px)
+}
+  
+.container span::after{
+    content: var(--l);
+    position: absolute;
+    height: 200%;
+    width: 100px;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+.containe span::after{
+    content: var(--l);
+    position: absolute;
+    height: 200%;
+    width: 100px;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+.container span:hover{
+    filter: contrast(250%);
+  }
+.containe span:hover{
+      filter: contrast(250%);
+    }
+.text1 span:nth-child(1){
+    color: #e31616;
+  }
+.text1 span:nth-child(2){
+    color: #e31616;
+  }
+.text1 span:nth-child(3){
+    color: #e31616;
+  }
+.text1 span:nth-child(4){
+    color: #e31616;
+  }
+.text1 span:nth-child(5){
+    color: #e31616;
+  }
+.text1 span:nth-child(6){
+    color: #e31616;
+  }
+.text1 span:nth-child(7){
+    color: #e31616;
+  }
+.text1 span:nth-child(8){
+    color: #e31616;
+  }
+.text1 span:nth-child(9){
+    color: #e31616;
+  }
+.text1 span:nth-child(10){
+    color: #e31616;
+  }
+  
+.text2 span:nth-child(1){
+    color: #29db29;
+}
+.text2 span:nth-child(2){
+    color: #29db29;
+}
+.text2 span:nth-child(3){
+    color: #29db29;
+}
+.text2 span:nth-child(4){
+    color: #29db29;
+}
+.text2 span:nth-child(5){
+    color: #29db29;
+}
+.text2 span:nth-child(6){
+    color: #29db29;
+}
+.text2 span:nth-child(7){
+    color: #29db29;
+}
+.text2 span:nth-child(8){
+    color: #29db29;
+}
+p{
+    font-family: 'Fredoka One', cursive;
+    color: #21d809;
+    margin-bottom: 5%;
+    font-size: 25px;
+}

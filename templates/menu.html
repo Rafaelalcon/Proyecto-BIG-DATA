@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='menu.css')}}">
+    <title>Página principal</title>
+</head>
+<body>
+    {%if login%}
+    <div id="content">
+        <div class="container text1">
+            <span style="--l: 'B'">B</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">N</span>
+            <span style="--l: 'W'">W</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'V'">V</span>
+            <span style="--l: 'E'">E</span>
+        </div>
+        <div class="containe text2">
+            <span style="--l: 'B'">B</span>
+            <span style="--l: 'Y'">Y</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'F'">F</span>
+            <span style="--l: 'A'">A</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'L'">L</span>
+        </div>
+    </div>
+    <input type="hidden" name="usuario_iniciado" value="{{ usuario_iniciado }}">
+    <div class="content">
+        <a href="{{url_for('results')}}">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>PLAY
+            </button>
+        </a>
+        <a href="{{url_for('grafico')}}">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>GRÁFICO PREGUNTAS
+            </button>
+        </a>
+    </div>
+    <audio id="hidden-audio" autoplay loop>
+        <source src="static/musicaprincipal.mp3" type="audio/mpeg">
+        <source src="static/musicaprincipal.wav" type="audio/wav">
+    </audio>
+    {%else%}
+    <div id="content">
+        <div class="cont text3">
+            <span style="--l: 'L'">L</span>
+            <span style="--l: 'O'">O</span>
+            <span style="--l: 'G'">G</span>
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">N</span>
+        </div>
+        <div class="co text4">
+            <span style="--l: 'I'">I</span>
+            <span style="--l: 'N'">N</span>
+            <span style="--l: 'C'">C</span>
+            <span style="--l: 'O'">O</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'R'">R</span>
+            <span style="--l: 'E'">E</span>
+            <span style="--l: 'C'">C</span>
+            <span style="--l: 'T'">T</span>
+            <span style="--l: 'O'">O</span>
+        </div>
+    </div>
+    <div class="content">
+        <a href="{{url_for('login')}}">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>VOLVER
+            </button>
+        </a>
+    </div>
+    {% endif %}
+</body>
+</html>
