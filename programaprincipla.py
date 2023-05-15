@@ -14,7 +14,7 @@ def connectBD():
     db = mysql.connector.connect(
         host = "127.0.0.1",
         user = "root",
-        passwd = "72583269Ra@"
+        passwd = "contraendoc"
     )
     cursor = db.cursor()
     cursor.execute("create schema if not exists users;")
@@ -23,7 +23,7 @@ def connectBD():
     conexion = mysql.connector.connect(
         host = "127.0.0.1",
         user = "root",
-        passwd = "72583269Ra@",
+        passwd = "contraendoc",
         database = "users"
     )
     return conexion
